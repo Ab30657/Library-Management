@@ -5681,11 +5681,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amar_\\source\\repos\\LibrarySystem\\LibrarySystem.csproj",
-      "projectName": "LibrarySystem",
-      "projectPath": "C:\\Users\\amar_\\source\\repos\\LibrarySystem\\LibrarySystem.csproj",
+      "projectUniqueName": "C:\\Users\\amar_\\source\\repos\\LibrarySystem\\BLL\\BLL.csproj",
+      "projectName": "BLL",
+      "projectPath": "C:\\Users\\amar_\\source\\repos\\LibrarySystem\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\amar_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amar_\\source\\repos\\LibrarySystem\\obj\\",
+      "outputPath": "C:\\Users\\amar_\\source\\repos\\LibrarySystem\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -5755,9 +5755,6 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
