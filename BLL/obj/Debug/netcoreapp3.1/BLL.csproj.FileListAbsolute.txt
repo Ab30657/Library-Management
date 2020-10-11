@@ -6,3 +6,7 @@ C:\Users\amar_\source\repos\LibrarySystem\BLL\obj\Debug\netcoreapp3.1\BLL.Assemb
 C:\Users\amar_\source\repos\LibrarySystem\BLL\bin\Debug\netcoreapp3.1\BLL.runtimeconfig.json
 C:\Users\amar_\source\repos\LibrarySystem\BLL\bin\Debug\netcoreapp3.1\BLL.runtimeconfig.dev.json
 C:\Users\amar_\source\repos\LibrarySystem\BLL\obj\Debug\netcoreapp3.1\BLL.genruntimeconfig.cache
+C:\Users\amar_\source\repos\LibrarySystem\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+C:\Users\amar_\source\repos\LibrarySystem\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+C:\Users\amar_\source\repos\LibrarySystem\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+C:\Users\amar_\source\repos\LibrarySystem\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
