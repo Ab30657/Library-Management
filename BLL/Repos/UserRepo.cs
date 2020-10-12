@@ -1,17 +1,19 @@
 ﻿using BLL.EF;
 using BLL.Models;
-using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
+using System.Linq;
 
 namespace BLL.Repos
 {
     public class UserRepo:BaseRepo<User>
     {
-        public UserRepo(LibraryContext context):base(context)
+        public UserRepo():base()
         {
             
+        }
+
+        public User GetUser(string uName)
+        {
+            return GetOne(Context.Users.Where(x => x.Username == uName).Select(x => x.UserId).FirstOrDefault());
         }
 
     }

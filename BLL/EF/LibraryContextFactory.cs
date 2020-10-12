@@ -14,7 +14,9 @@ namespace BLL.EF
             optionsBuilder.UseSqlServer(
                     connectionString,
                     options => options.EnableRetryOnFailure())
+#pragma warning disable CS0618 // Type or member is obsolete
                 .ConfigureWarnings(warnings => warnings.Throw(RelationalEventId.QueryClientEvaluationWarning));
+#pragma warning restore CS0618 // Type or member is obsolete
             return new LibraryContext(optionsBuilder.Options);
         }
     }

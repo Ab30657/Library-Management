@@ -8,6 +8,7 @@ namespace LibrarySystem
 {
     static class Program
     {
+        public static bool login = false;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -17,7 +18,15 @@ namespace LibrarySystem
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form1 loginForm = new Form1();
+            if (loginForm.ShowDialog() == DialogResult.OK && login==true)
+            {
+                Application.Run(new Dashboard());
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
