@@ -15,18 +15,16 @@ namespace LibrarySystem
         public static User _curr = new User();
         DateTime sessionStart = DateTime.Now;
         public Dashboard()
-        {
-            //_curr = GetUser(Form1.currUserId);       
+        {  
             InitializeComponent();
-            _curr.Username = "Ab30657";
-            _curr.UserId = 1;
         }
 
-        private User GetUser(int i)
-        {
-            UserRepo repo = new UserRepo();
-            return repo.GetOne(i);
-        }
+        //private User GetUser(int i)
+        //{
+        //    UserRepo repo = new UserRepo();
+        //    return repo.GetOne(i);
+        //}
+
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -98,11 +96,45 @@ namespace LibrarySystem
         {
             _unameTop.Text = _curr.Username;
             timer1.Enabled = true;
+            lbUserType.Text = _curr.UserType.ToString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbLoginTime.Text = DateTime.Now.Subtract(sessionStart).ToString(@"mm\:ss");
+        }
+
+
+        private void btnNewMember_Leave(object sender, EventArgs e)
+        {
+            btnNewMember.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnNewMember_Click(object sender, EventArgs e)
+        {
+            SetNavLine(sender as Button);
+            openChildForm(new NewMember());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Leave(object sender, EventArgs e)
+        {
+            button4.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SetNavLine(sender as Button);
+            this.Close();
         }
     }
 }

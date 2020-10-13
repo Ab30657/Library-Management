@@ -108,3 +108,5 @@ C:\Users\amar_\source\repos\LibrarySystem\LibrarySystem\obj\Debug\netcoreapp3.1\
 C:\Users\amar_\source\repos\LibrarySystem\LibrarySystem\obj\Debug\netcoreapp3.1\LibrarySystem.genruntimeconfig.cache
 C:\Users\amar_\source\repos\LibrarySystem\LibrarySystem\obj\Debug\netcoreapp3.1\LibrarySystem.ManageBook.resources
 C:\Users\amar_\source\repos\LibrarySystem\LibrarySystem\obj\Debug\netcoreapp3.1\LibrarySystem.csproj.CoreCompileInputs.cache
+C:\Users\amar_\source\repos\LibrarySystem\LibrarySystem\obj\Debug\netcoreapp3.1\LibrarySystem.NewMember.resources
+C:\Users\amar_\source\repos\LibrarySystem\LibrarySystem\obj\Debug\netcoreapp3.1\LibrarySystem.Settings.resources

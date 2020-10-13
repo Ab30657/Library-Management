@@ -8,7 +8,7 @@ namespace LibrarySystem
 {
     static class Program
     {
-        public static bool login = false;
+        public static int count = 3;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -19,13 +19,13 @@ namespace LibrarySystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Form1 loginForm = new Form1();
-            if (loginForm.ShowDialog() == DialogResult.OK && login==true)
+            while (count > 0)
             {
-                Application.Run(new Dashboard());
-            }
-            else
-            {
-                Application.Exit();
+                if (loginForm.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new Dashboard());
+                    Application.Exit();
+                }                
             }
         }
     }

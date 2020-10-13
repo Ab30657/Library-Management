@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using BLL.Models;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BLL.EF
 {
@@ -18,6 +19,16 @@ namespace BLL.EF
 
         public DbSet<User> Users { get; set; }
         public DbSet<Book> Books { get; set; }
+        public DbSet<Card> Cards { get; set; }
+        public DbSet<Student> Students { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Student>()
+                .HasOne(s => s.Card)
+                .WithOne(cd => cd.Student)
+                .HasForeignKey<Card>(ad => ad.StudentId);
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -32,5 +43,7 @@ namespace BLL.EF
 #pragma warning restore CS0618 // Type or member is obsolete
             }
         }
+
+
     }
 }

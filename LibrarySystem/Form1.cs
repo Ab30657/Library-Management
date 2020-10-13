@@ -17,8 +17,8 @@ namespace LibrarySystem
     {
 
         public static int currUserId { get; set; }
-        private UserRepo _userRepo = new UserRepo(); 
-        
+        private UserRepo _userRepo = new UserRepo();
+        public static User _user = new User();
         public Form1()
         {
             InitializeComponent();
@@ -27,19 +27,40 @@ namespace LibrarySystem
         private void button1_Click(object sender, EventArgs e)
         {
             //User _user = _userRepo.GetUser(txtUsername.Text);
-            User _user = new User();
-            _user.UserId = 1;
-            _user.Username = "Ab30657";            
+            using (UserRepo repo = new UserRepo())
+            {
+                _user = repo.GetUser(txtUsername.Text);
+            }
             if (_user!= null)
             {
-                Program.login = true;
-                currUserId = _user.UserId;
+                if (txtPassword.Text == _user.Password)
+                {
+                    currUserId = _user.UserId;
+                    Dashboard._curr.UserId = _user.UserId;
+                    Dashboard._curr.Username = _user.Username;
+                    Dashboard._curr.Password = _user.Password;
+                    Dashboard._curr.UserType = _user.UserType;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    lbStatus.Text = "Invalid Login: "+$"{--Program.count} tries remaining...";
+                    this.DialogResult = DialogResult.None;
+                }
+
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Program.count = 0;
+            this.DialogResult = DialogResult.Abort;
         }
     }
 }

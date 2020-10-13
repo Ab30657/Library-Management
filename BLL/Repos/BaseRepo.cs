@@ -34,6 +34,10 @@ namespace BLL.Repos
             return _table.Find(id);
         }
 
+        public virtual List<T> GetAll()
+        {
+            return _table.ToList();
+        }
         internal int SaveChanges()
         {
             try
